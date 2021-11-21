@@ -1,7 +1,7 @@
 package ticker
 
 import (
-	"fmt"
+	"log"
 	"sync"
 	"testing"
 	"time"
@@ -9,15 +9,13 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-// This function is named Example(), which is a package level test
-// function.
 func Example() {
 	ticker := NewDefaultTicker()
 	ch := ticker.Start()
 
 	go func() {
 		for t := range ch {
-			fmt.Println(t)
+			log.Println(t)
 		}
 	}()
 
