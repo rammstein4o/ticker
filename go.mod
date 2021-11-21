@@ -1,4 +1,4 @@
-module github.com/rammstein4o/timer
+module github.com/rammstein4o/ticker
 
 go 1.17
 
